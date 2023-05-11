@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" type="text/css" href="product_page.css">
+  <script src="https://cdn.jsdelivr.net/npm/@sendgrid/mail@7.4.6"></script>
+  <script src="product_page.js" defer></script>
+  <script src="https://cdn.sendgrid.com/api/v3/js/sendgrid.min.js"></script>
+
+</head>
+
+<body>
+<div class="product-container">
+  <div class="product-images">
+    <img src="https://img.ltwebstatic.com/images3_pi/2022/10/17/166597214113231447ac6d524ccb3526ad672102c4_thumbnail_900x.webp" alt="Product Image 1">
+    <img src="https://img.ltwebstatic.com/images3_pi/2023/03/08/16782446637b2480d5c6a71f9cb1c5fc8eee5b4d5d_thumbnail_405x552.webp" alt="Product Image 2">
+    <img src="https://img.ltwebstatic.com/images3_pi/2022/06/27/1656327581316204f8f10ce08e80aca063196b80e2_thumbnail_900x.webp" alt="Product Image 3">
+  </div>
+
+  <div class="product-details">
+    <h1>Basic dress</h1>
+    <p>Something something selling handmade clothes</p>
+    <button id="enquiry-button">Enquiry</button>
+  </div>
+</div>
+
+<dialog id="enquiry-dialog">
+  <form id="enquiry-form">
+    <fieldset>
+      <legend>Fabric Options:</legend>
+      <input type="radio" id="silk-option" name="fabric-options" value="silk">
+      <label for="silk-option">Silk</label><br>
+      <input type="radio" id="nylon-option" name="fabric-options" value="nylon">
+      <label for="nylon-option">Nylon</label><br>
+      <input type="radio" id="lycra-option" name="fabric-options" value="lycra">
+      <label for="lycra-option">Lycra</label>
+    </fieldset>
+    <label id="commentLabel" for="comment-input">Comment:</label>
+    <textarea id="comment-input"></textarea><br>
+    <label for="name-input">Name:</label>
+    <input type="text" id="name-input"><br>
+    <label for="email-input">Email:</label>
+    <input type="email" id="email-input"><br><br>
+
+    <button id="submit-button" type="submit" class="close-btn">
+      Submit
+    </button>
+    <button type="button" id="close-button">Close</button>
+  </form>
+</dialog>
+</body>
+</html>
